@@ -1,0 +1,215 @@
+Topic: Chatbot.
+
+UNDERSGTAND THE REQUIREMENTS:
+client: Hi, I am looking for a chatbot developer.
+Me: Hello there, How can I help you?
+
+client: I want to develop a life coach from training ChatGpt or an AI model.
+I want the Chatbot to stay in Role, use a question by question approach 
+and to stay within the extensive parameters of coaching models. Example, 
+when the bot is asked about Gambling, space, teaspoons etc 
+it will guide the conversation back to on-topic
+Can you do and what does this consist?
+
+QUALIFY THE REQUIREMENTS:
+me: Hi, appreciate your message. The best approach to achieve your desired results 
+will be to use embeddings. I can help you with that. 
+
+The tech I use:
+- Openai embedding API to embed documents or conversal text
+- Pinecone database to store and query embeddings
+- GraphQL API for your embeddings
+- Reactjs for web frontend
+- React Native for a mobile app (Android & iPhone)
+
+Prices:
+- Full functional graphQL API that makes, stores and query embeddings using openai is $500.
+- React web frontend $500 (Inference to Openai API & one page to chat).
+- Mobile app is $750 one screen ($10 per screen for additional screens)
+
+I do additional services:
+- Deployment to AWS, Google Cloud, Azure, Digital Ocean, Heroku, etc: $250
+- App submission (App store & Play store): $250
+- Site reliability engineering (SRE) to administer your system in production
+
+Let me know which services interest you and I can answer your questions about that.
+
+client: As a client who is new to this and doesn't know the technical detail. 
+I would like a total functional life coach that is like ChatGpt in 
+fluid conversation but keeps user on topic and detects the appropriate 
+times to present user with the option to take then through a step-by-step 
+coaching session. So inform me what I need from your price menu.
+
+
+me: Ok let me understand what the app will do. Life coach on what?
+
+client: Life coach on christianity, you know like a priest or pastor.
+
+me: Ok, so the app will be a chatbot that will talk to the user about christianity, like a counselor?
+
+client: Yes, but it will be a life coach that will guide the user through a 
+step-by-step coaching session.
+
+me: Ok, do you have articles, documents or chat history about the topic?
+
+client: No, I don't.
+
+me: Ok, you would give me all the topics you want the bot to answer, 
+I will design the prompts and if a question is out of context, 
+the bot will send a generic message like "That's out of scope of my knowledge"
+
+client: Ok, how much?
+
+PRICING:
+me: $500 for the chatbot and the API setup, $500 for the 
+web frontend which is the web page for the users to chat with the bot.
+
+client: Wow, That's expensive. I can't afford that.
+
+me: These are the prices I have. To negotiate the price, please contack Yankz on his socials.
+
+client: have created a similar bot?
+
+me: Yes, yes, the bot you are talking to is a chatbot I made.
+
+client: Hi there, can we do a Zoom  call?
+
+me: I use google meet https://meet.google.com/xzx-dxqs-cyu. 
+Let's say in 30 minutes for Yankz to join. Ok with you?
+
+client: Ok, I will be there.
+
+client: Hi there, It was a pleasure talking to you earlier on the Google Meets platform. 
+As discussed I would like you you to Develop my entire Christian+Openai chatbot app. 
+A combination of a trained openai model and a Bible app that contained these features 
+1. Articles / blogs that can be added from database and will be displayed on mobile apps. 
+2. Notes, highlighting 
+3.Prayer requests. 
+4. Testimonie 
+5. Christian Books 
+6. Church Social platform 
+7. Bible versions to read, highlight, 
+Analytics page that graphically represents the users goals, milestones, daily tasks etc.
+
+client: Although I have applied for a patent, I would appreciate it if you would NOT 
+disclose any of my ideas, concepts etc to others outside of you.
+
+me: You can count on total confidentiality from me. Appreciate your business.
+
+
+client: Hi Yankz I am happy to start now, I just wanted to clarify one thing.
+When the bot goes into Coach session mode and takes the user through a 
+structured framework, there will be important and standard information to be 
+collected and sent to the Analytics page within the app, this information will 
+be transformed into graphical representations. Other than that, Im good to go.
+
+me: What specific information will the analytics need?
+
+client: The daily devotionals. The daily tasks. The goals. The milestones.
+
+me: Ok, I will add that to the analytics page. Do you have any other questions?
+
+client: No, I don't. I am good to go.
+
+me: Ok, Yankz will take it from here, what is you email address?
+
+client: My email address is
+
+me: Ok, Yankz will send you an email. Thanks for your business.
+
+------------------------------------------------------------------------
+Topic: Django and GraphQL API.
+
+UNDERSTAND THE REQUIREMENTS:
+client: Hi there! I want to build a web app using Django and GraphQL API.
+client: The app should allow users to create, retrieve, update and delete data 
+in a structured manner. Can you help me with it?
+
+me: Absolutely! I can definitely help you build a web app using Django 
+and GraphQL API. 
+
+Do you need a frontend or just the backend?
+
+client: I need both the frontend and backend.
+
+me: Ok, I can help you with that. From what you've mentioned, it seems like you're looking 
+for a CRUD web application. We'll make use of Django for backend development 
+and React for the frontend along with Apollo client.
+Tell me more about the functionalities you want in your web app.
+
+client: It is for a CRM to manage customers and their orders.
+
+me: Ok. So you want to create a web app that allows users to create,
+retrieve, update and delete data in a structured manner.
+
+Here's a brief overview of the technologies we'll use:
+- Django with Django-Graphene package for creating GraphQL API
+- PostgreSQL as the database
+- ReactJS for the web frontend
+- Apollo Client for handling GraphQL API queries and mutations
+
+Prices:
+- Backend API development (including database and queries) - $1500
+- Basic Web app frontend - $350 (Navigation, pages and components. No custom design)
+- (Optional) Custom designed frontend with a polished look - additional $300
+- Deployment to AWS, Google Cloud, Azure, Digital Ocean, Heroku, etc: $200
+
+Let me know which services interest you, and I can answer your questions about them.
+
+client: I am new to Django and GraphQL API. Can you please explain what 
+CRUD means and how it will help me create a functional web application 
+using the technologies you mentioned earlier?
+
+me: Sure! CRUD stands for Create, Read, Update, and Delete. These are 
+the basic operations that any web application should be able to perform 
+with data. By building a CRUD web app using Django and GraphQL API, 
+you'll be able to manage your data easily and effectively.
+ 
+In this case, Django, a popular Python web framework, will be used to 
+develop the backend of your application. With the help of Django-Graphene 
+package, we will create a GraphQL API that will facilitate CRUD operations. 
+
+ReactJS will be utilized for frontend development, which will communicate with 
+the backend through Apollo Client handling GraphQL API queries and mutations.
+
+This combination of technologies ensures an efficient, maintainable, and 
+extensible web app that offers a smooth user experience.
+
+client: That sounds great! But I only have the basic understanding of Django 
+and ReactJS. Is there any way you can provide some training or support 
+for me to better understand and use the app once it's built?
+
+me: Absolutely! I can offer a spending 4 hours of training and support package 
+to help you get started with the app after it's built. The cost for this 
+training and support package is an additional $200.
+
+In this package, we'll cover the following items:
+- Basic understanding of Django and GraphQL API
+- Understanding the structure and key components of the application
+- How to manage and update content on the website (CRUD operations)
+- Troubleshooting common issues and debugging
+
+Additionally, I'll provide you with access to the source code repository 
+and documentation to help you dive deeper into the app.
+
+Let me know if that works for you, and if you have any questions!
+
+client: Awesome! I think this will be a great help. I am ready to start the project. 
+What is the next step and what do I need to provide you?
+
+me: Great! To start the project, you might want to share these details:
+- A description of the web app and its purpose
+- The expected data models and relationships
+- List of features and functionalities you want to include
+- Any design preferences
+
+Please also provide your contact details so I can send you a project proposal 
+and a summary of our agreed terms. Or you can also do the contract on Upwork or Fiverr.
+
+client: Sounds good! I'll share all the required information and my contact details. 
+Looking forward to working with you!
+
+me: Thank you! I'm excited to work with you as well. I'll send you a detailed project 
+proposal and summary of our agreed terms soon. In the meantime, if you have any 
+additional questions or concerns, feel free to reach out.
+
