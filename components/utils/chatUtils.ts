@@ -51,6 +51,8 @@ export const directChat = async (messages: any[], retry = 5): Promise<string> =>
         body: JSON.stringify(DEFAULT_PARAMS)
       });
       const msg = await result.json();
+      console.log(msg);
+      
       if(msg?.choices?.[0]?.message){
         const { content } = msg?.choices?.[0]?.message;        
         return content;
@@ -60,6 +62,7 @@ export const directChat = async (messages: any[], retry = 5): Promise<string> =>
       }      
       return "An error occured, please resend your last message. If the problem persists, please contact Yankz";
     } catch (error) {
+      console.error(error);
       if (retry > 0) {
         return await directChat(messages, retry - 1); 
       }
