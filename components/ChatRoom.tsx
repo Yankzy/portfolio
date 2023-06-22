@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useContext } from "react";
 import { Message } from "./Message";
 import Input from "./Input";
 import { DocumentData, onSnapshot } from "firebase/firestore";
-import { getRandomGreeting, systemRole, updateFireStore } from "./utils/chatUtils";
+import { systemRole, updateFireStore } from "./utils/chatUtils";
 import { ChatContext } from "./ChatContext";
 
 
@@ -21,7 +21,7 @@ export default function ChatRoom() {
     // }
     
     if (chatList.length < 1) {
-      const greet = getRandomGreeting(name)
+      const greet = `Hello ${name}, how can I help you today?`
       dispatch({ type: 'CHAT_LIST', payload: [
         { role: 'system', content: systemRole(name) }, 
         { role: 'assistant', content: greet }

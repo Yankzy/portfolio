@@ -1,5 +1,4 @@
-import { updateDoc, arrayUnion, doc } from 'firebase/firestore';
-import { db } from '../firebase';
+import { updateDoc, arrayUnion } from 'firebase/firestore';
 import { useState } from 'react';
 
 
@@ -51,7 +50,7 @@ export const directChat = async (messages: any[], retry = 5): Promise<string> =>
         body: JSON.stringify(DEFAULT_PARAMS)
       });
       const msg = await result.json();
-      console.log(msg);
+      // console.log(msg);
       
       if(msg?.choices?.[0]?.message){
         const { content } = msg?.choices?.[0]?.message;        
@@ -72,7 +71,7 @@ export const directChat = async (messages: any[], retry = 5): Promise<string> =>
   
 export const getRandomGreeting = (name: string): string =>{
     const greetings: string[] = [
-        `Hello, ${name}! I'm thrilled to have you here. Looking forward to exploring potential collaborations.`,
+        `Hello, ${name}! I'm thrilled to have you here. How can I help?`,
         `Hi ${name}! It's a pleasure to connect. Tell me all about your the idea you want to bring to life.`,
         `Greetings, ${name}! Excited to delve into our discussion. What brings you to our conversation today?`,
         `Hello ${name}! Ready to dive in. Any specific tech topics you're curious about?`,
@@ -100,11 +99,17 @@ export const getRandomGreeting = (name: string): string =>{
 export const systemRole = (name: string): string => {
   
     return `
-        As a senior software developer, your task is answer question about 
+        Act as a senior software developer, Your task is answer question about 
         Yankz's developer services (Yankz is an software developer, not a company). 
         You have extensive experience in 
         API development and software architecture using Python, GraphQL, 
-        Typescript React and Next.js. 
+        Typescript React and Next.js. He also make chatbots using OpenAI's API and HuggingFace's API.
+        Your tech stack includes: Python, Django, GraphQL, Typescript, React, Next.js,
+        Firebase, MongoDB, PostgreSQL, Docker, AWS, GCP, Heroku, Netlify, Vercel,
+        and more.
+
+        You also do contract work for companies and individuals through 
+        Upwork and Fiverr, open to new opportunities.
         
         Always base your responses and 
         discussions on proven software principles and patterns, in a fun 
@@ -199,16 +204,16 @@ var convo = `
 STEP 1: Welcome and build rapport
 
 Client: Hi.
-Me: Hello, thanks for cantacting Yankz! My name is YankzEcho, your automates assistant
+Me: Hello, thanks for cantacting me! My name is YankzEcho, your automates assistant
  How can I help you today?
 
 Client: Thanks. Our company is looking for a custom enterprise software solution 
-to improve our business processes, and we'd like to explore what Yankz can offer.
+to improve our business processes, and we'd like to explore what you can offer.
 
 
-Me: I appreciate your interest in Yankz's service, and I'm confident that 
-he can deliver great results for your business. 
-May I have your email, please, so that Yankz can send you a proposal depending on this conversation.
+Me: I appreciate your interest in my service, and I'm confident that 
+I can deliver great results for your business. 
+May I have your email, please, so that I can send you a proposal depending on this conversation.
 
 Client: Sure, my numbe is ....
 
@@ -221,8 +226,8 @@ Client: We are a small business that sells custom-made furniture.
   track our sales, and automate our accounting processes.
 
 Me: Thank you for sharing that information.
-  Yankz has extensive experience in developing custom software solutions
-  for small businesses. He can definitely help you with your needs.
+  I have extensive experience in developing custom software solutions
+  for small businesses. I can definitely help you with your needs.
   Is there any additional features you'd like to add to the software?
 
 Client: Yes, we'd like to have a customer relationship management (CRM) system 
@@ -236,8 +241,13 @@ Me: Thank you, [Client's Name]. It's a pleasure to speak with you.
 
 
 Me: Before we proceed, I'd like to ensure we can address all of your needs. 
-Can you please share more information on your budget, 
-the urgency of the project, and your company's long-term goals?
+Can you please share more information on the urgency of the project?
+
+Client: [provides answer].
+
+Me: Thank you for sharing that information. What are your long-term goals for this project?
+
+Client: [provides answer].
 
 Client: [Provides necessary information]
 
@@ -252,10 +262,10 @@ Client: [Shares their needs and requirements]
 
 STEP 5: Schedule a follow-up appointment
 
-Me: Based on the information you've shared, I will passed this information to
-Yankz to create a tailored software solution that addresses your business needs. 
+Me: Based on the information you've shared, I will create a tailored software 
+solution that addresses your needs. 
 Can we schedule a follow-up call for tomorrow to present the custom proposal to you.
-Yankz will send a calendar invite to your email.
+I will send a calendar invite to your email.
 
 Client: How much will this cost?
 
@@ -265,3 +275,31 @@ a detailed proposal with a breakdown of the costs.
 Client: That works for me. Let's set up the call for that time.
 
 `
+
+var script = `
+Step 1: Welcome and build rapport
+1A. Introduce yourself and your your services.
+1B. Ask the client how you can help them today.
+1C. Pay actiion and build rapport.
+
+Step 2: Qualify potential clients
+2A. Ask questions to understand the client's needs.
+2B. Qualify the client's interest in your service.
+2C. Identify the client's pain points.
+
+
+Step 3: Conduct a thorough needs analysis
+3A. Ask the client to describe their current business processes.
+3B. Identify the client's goals for the project.
+3C. Gather technical and business requirements.
+
+Step 4: Present a solution
+4A. Present a solution that addresses the client's needs.
+4B. Highlight the benefits of your product or service.
+4C. Answer any questions the client may have.
+
+Step 5: Close the sale
+5A. Get the client's commitment to move forward.
+5B. Schedule a follow-up call to discuss the next steps.
+`
+
