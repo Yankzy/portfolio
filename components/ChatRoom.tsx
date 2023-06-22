@@ -1,24 +1,14 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import { Message } from "./Message";
 import Input from "./Input";
-import { DocumentData, DocumentReference, doc, onSnapshot, setDoc } from "firebase/firestore";
-import { db } from "./firebase";
-import { getRandomGreeting, systemRole, updateFireStore, useChatContext } from "./utils/chatUtils";
-import { ulid } from "ulid";
+import { DocumentData, onSnapshot } from "firebase/firestore";
+import { getRandomGreeting, systemRole, updateFireStore } from "./utils/chatUtils";
 import { ChatContext } from "./ChatContext";
 
 
 
-interface User {
-  email: string;
-  name: string;
-}
-
 export default function ChatRoom() {
-  // const [messages, setMessages] = useState<Array<DocumentData> | undefined>([]);
-  // const { chatList, setChatList } = useChatContext();
   const scrollRef = useRef<HTMLDivElement>(null);
-  // const [roomRef, setRoomRef] = useState<DocumentReference<DocumentData>>();
   const { state, dispatch } = useContext(ChatContext);
   const { chatsRef, user, chatList, messages } = state;
   const {email, name } = user;

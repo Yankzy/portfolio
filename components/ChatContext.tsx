@@ -7,7 +7,8 @@ interface ChatState {
   chatsRef: DocumentReference<DocumentData> | null;
   user: { email: string, name: string };
   messages: Array<DocumentData>;
-  chatList: Array<{ role: string, content: string }>
+  chatList: Array<{ role: string, content: string }>;
+  subCollStr: string;
 
 }
 
@@ -20,14 +21,16 @@ const INITIAL_STATE: ChatState = {
   chatsRef: null,
   user: {name: '', email: ''},
   messages: [],
-  chatList: []
+  chatList: [],
+  subCollStr: ulid()
 };
 
 const chatReducer = (state: ChatState, action: ChatAction): ChatState => {
   switch (action.type) {
-    case 'SET_USER':
-      const { email, name } = action.payload;
-      const chatsRef = doc(db, "porfolioChats", email, ulid(), "messages");
+    case 'SET_USER':      
+      if (state.chatsRef) return state;
+      const { email } = action.payload;
+      const chatsRef = doc(db, "porfolioChats", email, state.subCollStr, "messages");
       setDoc(chatsRef, {});
       return { ...state, user: action.payload, chatsRef };
 

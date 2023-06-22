@@ -1,11 +1,9 @@
-import React, { FC, useContext, useEffect, useState } from 'react';
+import React, { FC, useContext, useEffect, useRef, useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { FaMinus } from 'react-icons/fa';
 import { BsFillChatDotsFill } from 'react-icons/bs';
 import ChatRoom from './ChatRoom';
-import { db } from './firebase';
-import { doc, setDoc } from 'firebase/firestore';
 import { motion } from 'framer-motion';
 import { ChatContext, ChatContextProvider } from './ChatContext';
 
@@ -71,9 +69,9 @@ const YankzEcho: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { state, dispatch } = useContext(ChatContext);
   const { user: {email} } = state; 
-  
 
   useEffect(() => {
+
     if (typeof window !== 'undefined' && !email) {
       const localUser = localStorage.getItem('gptChatUser') || null;
       localUser && dispatch({ type: 'SET_USER', payload: JSON.parse(localUser) });
