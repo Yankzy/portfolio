@@ -12,13 +12,13 @@ export default function ChatRoom() {
   const { state, dispatch } = useContext(ChatContext);
   const { chatsRef, user, chatList, messages } = state;
   const {email, name } = user;
-  const isMounted = useRef(false);
+  // const isMounted = useRef(false);
   
   useEffect(() => {
-    if (!isMounted.current) {
-      isMounted.current = true;
-      return;
-    }
+    // if (!isMounted.current) {
+    //   isMounted.current = true;
+    //   return;
+    // }
     
     if (chatList.length < 1) {
       const greet = getRandomGreeting(name)
