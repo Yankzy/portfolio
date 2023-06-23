@@ -92,7 +92,7 @@ const YankzEcho: FC = () => {
       </motion.div>
             
         {isOpen && (
-            <div className={`fixed bottom-20 right-0 mx-10 w-auto md:w-[45rem] md:bottom-6 md:right-6 z-50 bg-gray-200 rounded-lg shadow-lg`}>
+            <div className={`fixed bottom-20 right-0 mx-10 w-aut h-[50rem] md:w-[45rem] md:bottom-6 md:right-6 z-50 bg-gray-200 rounded-lg shadow-lg`}>
                 <div className="flex flex-row bg-white rounded-t-xl justify-between p-6">
                     <p className="text-2xl font-bold text-[#5f4def] ml-5">{email ? 'Support bot' : 'Start a chat'}</p>
                     <FaMinus size={20} color="#5f4def" className='mr-5 cursor-pointer' onClick={() => setIsOpen(!isOpen)} />

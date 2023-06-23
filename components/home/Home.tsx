@@ -8,6 +8,7 @@ import { Projects } from "./projects/Projects";
 import { Experience } from "./experience/Experience";
 import { Contact } from "./contact/Contact";
 import YankzEcho from "../Chat";
+import Testimonial from "../Testimonials";
 
 export const Home = () => {
   return (
@@ -20,6 +21,7 @@ export const Home = () => {
           <About />
           <Projects />
           <Experience />
+          {/* <Testimonial /> */}
           <Contact />
           <YankzEcho />
           <div
