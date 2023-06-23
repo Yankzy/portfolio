@@ -59,7 +59,7 @@ export default function ChatRoom() {
     <div className="lg:col-span-2 lg:block">
       <div className="w-full">
 
-        <div className="relative w-full p-6 overflow-y-auto h-[60rem] bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div className="relative w-full p-6 overflow-y-auto h-[40rem] md:h-[60rem] bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
           <ul className="space-y-2">
             {messages?.map((message: DocumentData) => (
               <div key={message.createdAt} ref={scrollRef}>
