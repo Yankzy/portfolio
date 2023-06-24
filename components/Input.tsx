@@ -1,8 +1,9 @@
 import { Formik, Form, Field } from "formik";
 import { FaTelegramPlane } from "react-icons/fa";
 import { directChat, updateFireStore } from "./utils/chatUtils";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ChatContext } from "./ChatContext";
+import Spiner from "./Spiner";
 
 
 interface FormValues {
@@ -15,8 +16,10 @@ export default function Input() {
   const { state, dispatch } = useContext(ChatContext);
   const { chatList, chatsRef, user } = state;
   const { email } = user;
+  const [isLoading, setIsLoading] = useState<Boolean>(false)
 
   const onSubmit = async(values: FormValues, { resetForm }: { resetForm: () => void }) => {
+    setIsLoading(true);
     resetForm();
     updateFireStore(chatsRef, values.message, email);
     const history = [...chatList, { role: 'user', content: values.message }]
@@ -25,6 +28,7 @@ export default function Input() {
       const newhistory = [...history, { role: 'assistant', content: response }]
       dispatch({ type: 'CHAT_LIST', payload: newhistory });
       updateFireStore(chatsRef, response, email, true);
+      setIsLoading(false);
     });
     
   };
@@ -42,10 +46,14 @@ export default function Input() {
               required
             />
             <button type="submit">
-              <FaTelegramPlane
-                className="h-10 w-10 text-[#5f4def]"
-                aria-hidden="true"
-              />
+              {isLoading ? (
+                <Spiner />
+              ):(
+                  <FaTelegramPlane
+                    className="h-10 w-10 text-[#5f4def]"
+                    aria-hidden="true"
+                  />
+              )}
             </button>
           </div>
         </Form>

@@ -25,10 +25,6 @@ const INITIAL_STATE: ChatState = {
   subCollStr: ulid()
 };
 
-if(INITIAL_STATE.user.email){
-  console.log('user email is set');
-  
-}
 
 const chatReducer = (state: ChatState, action: ChatAction): ChatState => {
   switch (action.type) {
