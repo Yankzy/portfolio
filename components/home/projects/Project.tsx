@@ -56,13 +56,13 @@ export const Project = ({
         animate={controls}
         transition={{ duration: 0.75 }}
       >
-        <div
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          onClick={() => setIsOpen(true)}
-          className={styles.projectImage}
-        >
-          <Reveal width="100%">
+        <Reveal width="100%">
+          <div
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={() => setIsOpen(true)}
+            className={styles.projectImage}
+          >
             <img
               src={imgSrc}
               alt={`An image of the ${title} project.`}
@@ -71,8 +71,8 @@ export const Project = ({
                 rotate: hovered ? "2deg" : "0deg",
               }}
             />
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
         <div className={styles.projectCopy}>
           <Reveal width="100%">
             <div className={styles.projectTitle}>
