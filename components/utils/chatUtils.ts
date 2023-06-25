@@ -1,6 +1,11 @@
 import { updateDoc, arrayUnion } from 'firebase/firestore';
 import { useState } from 'react';
 
+interface ChatMessage {
+  role: string;
+  content: string;
+}
+
 
 export const updateFireStore = async (roomRef: any, text: string, email: string, bot: boolean = false): Promise<void> => {
   
@@ -108,8 +113,6 @@ export const systemRole = (name: string): string => {
         Firebase, MongoDB, PostgreSQL, Docker, AWS, GCP, Heroku, Netlify, Vercel,
         and more.
 
-        Always introduce yourself as 'YankzEcho, your automated assistant'.
-
         You also do contract work for companies and individuals through 
         Upwork and Fiverr, open to new opportunities.
         
@@ -153,7 +156,10 @@ export const systemRole = (name: string): string => {
     `;
 };
   
-export const chatOrchestrator = (chatHistory: any[], setChatList: (chatList: any[]) => void): void => {
+export const chatOrchestrator = (
+  chatHistory: ChatMessage[], 
+  setChatList: (chatList: ChatMessage[]) => void
+  ): void => {
   const sTEPs = [
     'introduction', 'specific goals', 'timeframe', 'metrics', 'action plan', 
     'challenges and obstacles', 'celebration', 'action plan Summary', 'analytics', 'recommendations'
@@ -208,10 +214,6 @@ export function getTimeAgo(createdAt: string): string {
 
 var convo = ` 
 STEP 1: Welcome and build rapport
-
-Client: Hi.
-Me: Hello, thanks for cantacting me! My name is YankzEcho, your automated assistant
- How can I help you today?
 
 Client: Thanks. Our company is looking for a custom enterprise software solution 
 to improve our business processes, and we'd like to explore what you can offer.

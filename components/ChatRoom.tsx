@@ -21,7 +21,7 @@ export default function ChatRoom() {
     // }
     
     if (chatList.length < 1) {
-      const greet = `Hello ${name}, how can I help you today?`
+      const greet = `Hello ${name}, I am YankzEcho, your automated assistant. How can I help you today?`
       dispatch({ type: 'CHAT_LIST', payload: [
         { role: 'system', content: systemRole(name) }, 
         { role: 'assistant', content: greet }
