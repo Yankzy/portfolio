@@ -62,14 +62,16 @@ export const Project = ({
           onClick={() => setIsOpen(true)}
           className={styles.projectImage}
         >
-          <img
-            src={imgSrc}
-            alt={`An image of the ${title} project.`}
-            style={{
-              width: hovered ? "100%" : "95%",
-              rotate: hovered ? "2deg" : "0deg",
-            }}
-          />
+          <Reveal width="100%">
+            <img
+              src={imgSrc}
+              alt={`An image of the ${title} project.`}
+              style={{
+                width: hovered ? "100%" : "95%",
+                rotate: hovered ? "2deg" : "0deg",
+              }}
+            />
+          </Reveal>
         </div>
         <div className={styles.projectCopy}>
           <Reveal width="100%">
