@@ -14,9 +14,58 @@ export const Experience = () => {
 
 const experience = [
   {
+    title: "Blue Square",
+    link: "https://creativemediani.com/",
+    position: "Full Stack Developer (Contract Work)",
+    time: "December 2022 - Present",
+    location: "Remote",
+    description: `
+    <ul>\n
+      <li>Integrate openIMIS backend with Gambia Civil Registration API and frontend pages for insurance management.</li>\n 
+    </ul>
+    `,
+    tech: [
+      "Python",
+      "Django",
+      "GraphQL",
+      "Celery",
+      "PostgresQL",
+      "React",
+      "Redux",
+      "Git",
+      "GitHub",
+      "Material UI",
+      "API integration",
+    ],
+  },
+  {
+    title: "Evolov",
+    link: "https://creativemediani.com/",
+    position: "Full Stack Developer (Contract Work)",
+    time: "As needed",
+    location: "Remote",
+    description: `
+    <ul>\n
+      <li>Made their backend with Django and GraphQL and frontend integration with Apollo client.</li>\n 
+    </ul>
+    `,
+    tech: [
+      "Python",
+      "Django",
+      "GraphQL",
+      "Celery",
+      "PostgresQL",
+      "React",
+      "API integration",
+      "Apollo client",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
     title: "Creative Media",
     link: "https://creativemediani.com/",
-    position: "Backend Engineer",
+    position: "Backend Developer",
     time: "April 2021 - Dec. 2022",
     location: "Remote",
     description: `
@@ -44,7 +93,7 @@ const experience = [
   {
     title: "Halal Anywhere",
     link: "https://web.facebook.com/halalanywhere/",
-    position: "Junior Back-end Developer",
+    position: "Junior Backend Developer",
     time: "June 2019 - April 2021",
     location: "Casablanca, Morocco",
     description: `
