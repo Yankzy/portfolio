@@ -23,7 +23,20 @@ export const Home = () => {
           <Experience />
           {/* <Testimonial /> */}
           <Contact />
-          <YankzEcho />
+          {/* <YankzEcho /> */}
+
+          <iframe
+            title="Embedded Widget"
+            src="https://widget-849.pages.dev/"
+            width="100%"
+            height="100%"
+            style={{
+              position: 'fixed',
+              bottom: '4px',
+              right: '4px',
+              zIndex: 50,
+            }}
+          />
           <div
             style={{
               height: "200px",
