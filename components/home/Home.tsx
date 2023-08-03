@@ -23,9 +23,9 @@ export const Home = () => {
           <Experience />
           {/* <Testimonial /> */}
           <Contact />
-          {/* <YankzEcho /> */}
+          <YankzEcho />
 
-          <iframe
+          {/* <iframe
             title="Embedded Widget"
             src="https://widget-849.pages.dev/"
             width="100%"
@@ -36,7 +36,7 @@ export const Home = () => {
               right: '4px',
               zIndex: 50,
             }}
-          />
+          /> */}
           <div
             style={{
               height: "200px",
