@@ -141,6 +141,7 @@ const projects = [
   {
     title: "Customer Support Agent", 
     imgSrc: "project-imgs/gpt4.png",
+    code: "https://www.github.com",
     projectLink: "https://yankz.vercel.app/",
     tech: ["ChatGPT API", "Typescript", "Firestore", "Next.js", "Tailwind CSS", "Firebase", "React", "AI"],
     description:
